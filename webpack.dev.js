@@ -12,10 +12,11 @@ module.exports = merge(common, {
   devServer: {
     static: {
       directory: path.resolve(__dirname, "dist"),
+      watch: true,
     },
     port: 3000,
     open: true,
-    hot: true,
+    hot: false,
     compress: true,
     historyApiFallback: true,
   },
