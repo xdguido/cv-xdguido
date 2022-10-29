@@ -26,13 +26,9 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'imgs/',
-                        publicPath: 'imgs/'
-                    }
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[hash][ext]'
                 }
             }
         ]
